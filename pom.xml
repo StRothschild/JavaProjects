@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Maven2 或 Maven3 只能是4.0.0 -->
+    <modelVersion>4.0.0</modelVersion>
+    <!-- 以下三个为必填字段，用于定位本项目 -->
+    <groupId>com.jiangsheng</groupId>
+    <!-- 项目名称，一般与项目目录名相同 -->
+    <artifactId>JavaProject</artifactId>
+    <version>1.0</version>
+
+    <!-- 可选，项目打包的类型，可以使jar、war、rar、ear、pom，默认是jar -->
+    <packing>pom</packing>
+
+    　　
+    <!-- 可选，设置自定义的变量 -->
+    <properties>
+        <!-- 还有部分在 超级pom 中定义的变量可以直接使用，比如 project.basedir -->
+        <org.springframework-version>3.1.1.RELEASE</org.springframework-version>
+    </properties>
+
+    <!-- 可选，通过定义多个 profile, 并在编译时激活某个或多个 profile 来覆盖配置信息 -->
+    <!-- profile 也可以配置在 settings.xml 中，成为全局配置 -->
+    <profiles>
+        <profile>
+            <!-- 必须，id 用于定位 profile -->
+            <id>profileId</id>
+            <!-- 可选，表示此 profile 是默认激活。还可以通过 mvn 命令来选择激活某个 profile，例如 mvn package –P profileId  -->
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <!-- 以下可以配置特定的信息来覆盖外部的相同标签 -->
+            <properties></properties>
+            <repositories></repositories>
+            <build></build>
+        </profile>
+    </profiles>
+
+    <!-- 可选，构建相关配置 -->
+    <build>
+        <!-- build目标文件的存放目录，默认在${basedir}/target目录 -->
+        <directory>${basedir}/target</directory>
+        <!-- build目标文件的名称，默认情况为${artifactId}-${version} -->
+        <finalName>${artifactId}</finalName>
+
+        <!-- 可选，用于包含或者排除某些资源文件 -->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+
+        <!-- 可选，插件 -->
+        <plugins>
+
+        </plugins>
+    </build>
+
+    <!-- 可选，配置本项目需要使用的远程仓库。和 setting.xml 中的配置作用相同，但 setting.xml 的配置是全局的。 -->
+    <repositories>
+        <repository>
+            <id>oauth-maven-repo</id>
+            <name>OAuth Maven repository</name>
+            <url>http://oauth.googlecode.com/svn/code/maven</url>
+        </repository>
+    </repositories>
+
+    <!-- 可选，依赖管理 -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${org.springframework-version}</version>
+            <!-- 如果是本地jar包，则可以指定路径 -->
+            <systemPath>${project.basedir}/src/lib/spring-webmvc-5.0.1.RELEASE.jar</systemPath>
+        </dependency>
+    </dependencies>
+</project>
