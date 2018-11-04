@@ -56,7 +56,7 @@
 
         <!-- 可选，插件 -->
         <plugins>
-
+            <plugin></plugin>
         </plugins>
     </build>
 
