@@ -46,6 +46,8 @@
         <!-- 可选，用于包含或者排除某些资源文件 -->
         <resources>
             <resource>
+                <targetPath>META-INF/plexus</targetPath>  
+                <filtering>true</filtering>  
                 <directory>src/main/java</directory>
                 <includes>
                     <include>**/*</include>
