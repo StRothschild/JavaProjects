@@ -13,7 +13,6 @@
     <!-- 可选，项目打包的类型，可以使jar、war、rar、ear、pom，默认是jar -->
     <packing>pom</packing>
 
-    　　
     <!-- 可选，设置自定义的变量 -->
     <properties>
         <!-- 还有部分在 超级pom 中定义的变量可以直接使用，比如 project.basedir -->
