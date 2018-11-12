@@ -42,7 +42,7 @@
         <directory>${basedir}/target</directory>
         <!-- build目标文件的名称，默认情况为${artifactId}-${version} -->
         <finalName>${artifactId}</finalName>
-        <!-- 可选，配置文件 -->
+        <!-- 可选，设置配置文件 -->
         <filters>/filter/test.properties</filters>
         
         <!-- 可选，用于包含或者排除某些资源文件 -->
