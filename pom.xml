@@ -1,9 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <!-- Maven2 或 Maven3 只能是4.0.0 -->
     <modelVersion>4.0.0</modelVersion>
+         
     <!-- 以下三个为必填字段，用于定位本项目 -->
     <groupId>com.jiangsheng</groupId>
     <!-- 项目名称，一般与项目目录名相同 -->
