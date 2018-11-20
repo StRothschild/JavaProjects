@@ -18,7 +18,7 @@
     <!-- 可选，设置自定义的变量 -->
     <properties>
         <!-- 还有部分在 超级pom 中定义的变量可以直接使用，比如 project.basedir -->
-        <org.springframework-version>3.1.1.RELEASE</org.springframework-version>
+        <org.springframework-version>5.0.8.RELEASE</org.springframework-version>
     </properties>
 
     <!-- 可选，通过定义多个 profile, 并在编译时激活某个或多个 profile 来覆盖配置信息 -->
