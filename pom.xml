@@ -12,7 +12,7 @@
     <artifactId>JavaProject</artifactId>
     <version>1.0</version>
 
-    <!-- 可选，项目打包的类型，可以使jar、war、rar、ear、pom，默认是jar -->
+    <!-- 可选，项目打包的类型，可以使jar、war、rar、ear、pom，默认是jar包 -->
     <packing>pom</packing>
 
     <!-- 可选，设置自定义的变量 -->
